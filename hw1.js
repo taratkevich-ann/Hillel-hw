@@ -63,6 +63,3 @@ alert(str.includes(myStr));
 let newStr = str.slice(0, 20);
 let result = `${newStr} ${myStr}`;
 alert(result)
-
-
-
