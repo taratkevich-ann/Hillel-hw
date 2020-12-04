@@ -14,10 +14,10 @@ alert(`What's up, ${firstName} ${lastName}?`);
 /* 3 */
 let firstNumber = +prompt('Write the first number');
 let secondNumber = +prompt('Write the second number');
-alert(firstNumber*secondNumber);
-alert(firstNumber-secondNumber);
-alert(firstNumber/secondNumber);
-alert(firstNumber+secondNumber);
+alert(firstNumber * secondNumber);
+alert(firstNumber - secondNumber);
+alert(firstNumber / secondNumber);
+alert(firstNumber + secondNumber);
 
 
 /* 4 */
@@ -30,9 +30,9 @@ alert(julySalary);
 
 /* 5 */
 let number = +prompt('Write a number');
-if(number%2){
+if (number % 2) {
     alert('Нечетное число')
-} else{
+} else {
     alert('Четное число')
 }
 
@@ -55,11 +55,11 @@ alert(userNumber);
 
 
 /* 8 */
-let str = prompt('Что Вам нравится изучать','Мне нравится изучать Front-end');
+let str = prompt('Что Вам нравится изучать', 'Мне нравится изучать Front-end');
 let myStr = prompt('Что вы любите изучать?');
 
 alert(str.includes(myStr));
 
 let newStr = str.slice(0, 20);
 let result = `${newStr} ${myStr}`;
-alert(result)
+alert(result);
