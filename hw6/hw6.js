@@ -55,8 +55,8 @@ let line2 = new Line(60, 260, 210, 210, 'rgb(121, 59, 209)');
 let rect = new Rect(260, 170, 60, 120, 'rgb(241, 245, 118)')
 let rect2 = new Rect(280, 150, 120, 45, 'rgba(30, 194, 199, .8)')
 let rect3 = new Rect(360, 180, 60, 50, 'rgb(145, 245, 118)')
-let circle = new Circle(75, 75, 50, 'rgba(255, 0, 102, .7)')
-let smallCircle = new Circle(30, 30, 30, 'rgba(255, 102, 153, .7)')
+let circle = new Circle(100, 100, 50, 'rgba(255, 0, 102, .7)')
+let smallCircle = new Circle(60, 60, 30, 'rgba(255, 102, 153, .7)')
 
 let drawArea = new Canvas('canvas');
 
