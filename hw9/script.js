@@ -19,9 +19,9 @@ let insideCoords = document.createElement('span')
 div.after(insideCoords)
 
 html.addEventListener('mousemove', function (event) {
-    outsideCoords.textContent = `x: ${event.clientX},   y: ${event.clientY}`
+    outsideCoords.textContent = `x: ${event.clientX}, y: ${event.clientY}`
     if (div === event.target) {
-        insideCoords.textContent = `x: ${event.clientX - div.getBoundingClientRect().x} ,   y: ${Math.floor(event.clientY - div.getBoundingClientRect().y)}`
+        insideCoords.textContent = `x: ${event.clientX - div.getBoundingClientRect().x}, y: ${Math.floor(event.clientY - div.getBoundingClientRect().y)}`
     } else{
         insideCoords.textContent = ''
     }
