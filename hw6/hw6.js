@@ -10,9 +10,9 @@ function Line(x, y, x2, y2, color) {
     this.secondY = y2;
     this.draw = function (ctx) {
         ctx.beginPath()
-        ctx.moveTo(x2, y2)
-        ctx.lineTo(x, y)
-        ctx.strokeStyle = color
+        ctx.moveTo(this.secondX, this.secondY)
+        ctx.lineTo(this.x, this.y)
+        ctx.strokeStyle = this.color
         ctx.stroke()
     }
 }
@@ -23,8 +23,8 @@ function Rect(x, y, w, h, color) {
     this.height = h
     this.draw = function (ctx) {
         ctx.beginPath()
-        ctx.rect(x, y, w, h)
-        ctx.fillStyle = color
+        ctx.rect(this.x, this.y, this.width, this.height)
+        ctx.fillStyle = this.color
         ctx.fill()
     }
 }
@@ -34,8 +34,8 @@ function Circle(x, y, r, color) {
     this.radius = r;
     this.draw = function (ctx) {
         ctx.beginPath()
-        ctx.arc(x, y, r, 0, 2 * Math.PI)
-        ctx.fillStyle = color
+        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI)
+        ctx.fillStyle = this.color
         ctx.fill()
     }
 }
