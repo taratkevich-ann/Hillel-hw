@@ -11,13 +11,14 @@ class Line extends Figure {
         super(x, y, color);
         this.secondX = x2;
         this.secondY = y2;
-        this.draw = function (ctx) {
-            ctx.beginPath()
-            ctx.moveTo(x2, y2)
-            ctx.lineTo(x, y)
-            ctx.strokeStyle = color
-            ctx.stroke()
-        }
+    }
+
+    draw = function (ctx) {
+        ctx.beginPath()
+        ctx.moveTo(this.secondX, this.secondY)
+        ctx.lineTo(this.x, this.y)
+        ctx.strokeStyle = this.color
+        ctx.stroke()
     }
 }
 
@@ -26,12 +27,13 @@ class Rect extends Figure {
         super(x, y, color);
         this.width = w;
         this.height = h;
-        this.draw = function (ctx) {
-            ctx.beginPath()
-            ctx.rect(x, y, w, h)
-            ctx.fillStyle = color
-            ctx.fill()
-        }
+    }
+
+    draw = function (ctx) {
+        ctx.beginPath()
+        ctx.rect(this.x, this.y, this.width, this.height)
+        ctx.fillStyle = this.color
+        ctx.fill()
     }
 }
 
@@ -39,12 +41,12 @@ class Circle extends Figure {
     constructor(x, y, r, color) {
         super(x, y, color);
         this.radius = r;
-        this.draw = function (ctx) {
-            ctx.beginPath()
-            ctx.arc(x, y, r, 0, 2 * Math.PI)
-            ctx.fillStyle = color
-            ctx.fill()
-        }
+    }
+    draw = function (ctx) {
+        ctx.beginPath()
+        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI)
+        ctx.fillStyle = this.color
+        ctx.fill()
     }
 }
 
