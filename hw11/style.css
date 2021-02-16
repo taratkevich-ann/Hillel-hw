@@ -1,0 +1,61 @@
+body{
+    background: url("nebula.jpg") repeat;
+    background-size: contain;
+    color: #fff;
+    padding: 75px 20px 30px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 65px;
+    font-weight: 900;
+}
+
+header h3{
+    font-size: 45px;
+}
+header p{
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 0 50px;
+}
+
+.show-content{
+    display: inline-block;
+    border: 3px solid #fff;
+    padding: 17px 45px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    transition: .5s background-color, color ease;
+
+}
+
+.show-content:hover{
+    background-color: #fff;
+    color: #01052e;
+}
+
+.main{
+    margin: 50px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-planet{
+    width: 32%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    margin: 0 0 30px;
+}
+
+.about-planet h2{
+    font-size: 30px;
+}
+.about-planet img{
+    width: 100%;
+}
