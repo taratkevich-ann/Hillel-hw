@@ -16,7 +16,7 @@ const createHeaderContent = (data) => {
     body.appendChild(header)
 }
 
-const showContent = (data) => {
+const showContent = () => {
     let btn = document.createElement('a')
     btn.setAttribute('href', '#')
     btn.classList.add('show-content')
@@ -62,7 +62,7 @@ const createMainContent = (data) => {
 
 const createPageContent = (data) => {
     createHeaderContent(data)
-    showContent(data)
+    showContent()
     createMainContent(data)
 }
 
@@ -70,5 +70,4 @@ const createPageContent = (data) => {
 fetch('https://trevadim.github.io/vue/data/data.json')
     .then((data) => data.json())
     .then((result) => createPageContent(result))
-    // .then((result1) => createHeaderContent(result1))
     .catch((error) => console.log(error))
