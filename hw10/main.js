@@ -35,15 +35,17 @@ class Square {
     }
 }
 
-let squares = setInterval(() => {
-    new Square(
-        Math.random() * canvas.width,
-        0,
-        20,
-        20,
-        '#' + (Math.random().toString(16) + '000000').substring(2, 8),
-        Math.round(1 + Math.random() * (4-1)))
-}, 1000)
+setInterval(() => {
+    if (isAnimated) {
+        new Square(
+            Math.random() * canvas.width,
+            0,
+            20,
+            20,
+            '#' + (Math.random().toString(16) + '000000').substring(2, 8),
+            Math.round(1 + Math.random() * (4 - 1)))
+    }
+}, 800)
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -51,14 +53,14 @@ function animate() {
         rect.draw()
         rect.move()
 
-        if(rect.y > canvas.height){
+        if (rect.y > canvas.height) {
             rects.splice(rects.indexOf(rect), 1)
         }
     }
-    if(isAnimated) requestAnimationFrame(animate);
+    if (isAnimated) requestAnimationFrame(animate);
 }
 
-startBtn.addEventListener('click', function (){
+startBtn.addEventListener('click', function () {
     isAnimated = true
     animate()
     rects = []
@@ -66,23 +68,23 @@ startBtn.addEventListener('click', function (){
     score.textContent = count + ''
 })
 
-stopBtn.addEventListener('click', function(){
+stopBtn.addEventListener('click', function () {
     isAnimated = false
 })
 
-window.addEventListener('blur', function(){
-    isAnimated = false
-    clearInterval(squares)
-})
 
-window.addEventListener('focus', function(){
+window.addEventListener('focus', function () {
     isAnimated = true
     animate()
 })
 
-canvas.addEventListener('mousedown', function (e){
-    for (let rect of rects){
-        if (rect.isPointInside(e.pageX, e.pageY)){
+window.addEventListener('blur', function () {
+    isAnimated = false
+})
+
+canvas.addEventListener('mousedown', function (e) {
+    for (let rect of rects) {
+        if (rect.isPointInside(e.pageX, e.pageY)) {
             rects.splice(rects.indexOf(rect), 1)
             count += 1
             score.textContent = count + ''
